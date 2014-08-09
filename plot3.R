@@ -1,3 +1,4 @@
+
 data <- read.csv ( "household_power_consumption.txt", sep = ";" , header= TRUE, stringsAsFactors = FALSE, na.strings = "?")
 data$dttm <- paste(data$Date , data$Time , sep = " " )
 data$conversion <- strptime( data$dttm , format="%d/%m/%Y %H:%M:%S")
